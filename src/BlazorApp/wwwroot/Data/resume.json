@@ -1,0 +1,180 @@
+{
+  "name": "Mickaël Billet",
+  "address": "10, rue Walter D'Islou 78800 Houilles, FR",
+  "phone": "06 25 70 76 47",
+  "mail": "mickael.billet@gmail.com",
+  "education": [
+    {
+      "title": "Xamarin University",
+      "description": "Xamarin Certified Mobile Developer",
+      "years": "2017 - 2019",
+      "sort": 1
+    },
+    {
+      "title": "CFA-AFTI (ETGL)",
+      "description": "Software Engineer's degree",
+      "years": "2000 - 2002",
+      "sort": 2
+    },
+    {
+      "title": "Rouen University",
+      "description": "Master",
+      "years": "1997 - 1999",
+      "sort": 3
+    }
+  ],
+  "experiencetype1": [
+    {
+      "title": "Lead Software Engineer",
+      "company": "Novacor",
+      "years": "Oct 2018 - Present",
+      "location": "Paris Area, France",
+      "sort": 1,
+      "missions": [
+        {
+          "description": "Development of a software solution to perform the update, traceability and serialization of Novacor medical devices. (C #, C ++, XAML, Asp.Net Core WebAPI, WPF, Identity, Hid, Ftdi, Bluetooth Low Energy, SQL Server, Dapper, Git)",
+          "tasks": []
+        },
+        {
+          "description": "Development of new features on medical device software intended for cardiologists according to standard EN62304 (C #, XAML, Asp.Net Core WebAPI, WPF, Identity, FTDI, MS Access, SQL Server, Dapper, ADO.NET, Entity Framework Core , MySql, SqlLite, Git)",
+          "tasks": [
+            "Authentication and authorization system (GDPR compliance)",
+            "Patients anonymization",
+            "HL7 interoperability (Research and implementation of a solution to interconnect the software with hospital information systems according to the HL7 standard)",
+            "Migration of the application to WPF .Net Core",
+            "Migration of database to MySql, SqlLite et SQL Server"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Software Development Manager",
+      "company": "Nodea Medical",
+      "years": "Dec 2014 - Aug 2016",
+      "location": "Paris Area, France",
+      "sort": 3,
+      "missions": [
+        {
+          "description": "Within a biotechnology Startup, co-development of a medical device (Probea), specialized in real-time diagnosis assistance for cancer based on the analysis of endogenous fluorescence emitted by tumour tissue",
+          "tasks": [
+            "Specification, architecture (MVVM), coding (C #, XAML and WPF), verification and configuration management (GIT) of the software system. The software is designed to control the device and analyze the data collected, according to the EN62304 standard.",
+            "Project management and management of 2 developers.",
+            "Support of the technical team in the development of system engineering and technological choices.",
+            "Establishment of risk managements process with the quality manager, according to the EN14971 standard and TR80002.",
+            "Participation in the ISO13485 certification audits."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Medical Software Consultant",
+      "company": "Consultant freelance",
+      "years": "2015",
+      "location": "Paris Area, France",
+      "sort": 4,
+      "missions": [
+        {
+          "description": "Specific missions in different companies specializing in medical devices",
+          "tasks": [
+            "Software development for Novacor (http://www.novacor.fr/).",
+            "Advice for the implementation of the EN62304 and EN14971 for Damae Medical (http://damaemedical.fr/).",
+            "Software department audit for VitaDX (http://fr.vitadx.com/)."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Senior Software Engineer",
+      "company": "Novacor",
+      "years": "Mars 2009 - Nov 2014",
+      "location": "Paris Area, France",
+      "sort": 5,
+      "missions": [
+        {
+          "description": "Responsible  for the  development  of  an  application  designed  to  read,  program  and analyze data  collected  by  an ambulatory ECG (electrocardiography) recorder. The medical device (RTEST) intended for cardiologists allows the detection and recording of pathological events and to record heart rate continuously.",
+          "tasks": [
+            "Specification, architecture (MVC), conception (UML), coding (C#, XAML, WPF, SQL, ADO.NET and C++),  verification, configuration (CVS), setup (InnoSetup) and maintenance of the software system.",
+            "Establishment of compliance with standards EN62304 concerning  the software life­cycle process  and EN14971 associated with the risk management process for medical devices. (safety class B)",
+            "Participation in ISO9001/13485 certification audits."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Senior Software Engineer",
+      "company": "Thales (Mission for Soat)",
+      "years": "Mars 2007 - Feb 2009",
+      "location": "Paris Area, France",
+      "sort": 6,
+      "missions": [
+        {
+          "description": "As  part  of  the  implementation  for  the  French  Defense  Procurement  Agency (DGA) of  a simulator  to  assess future platforms,  development  and  maintenance  of  some  software  components  integrated  into  a  distributed  simulation environment, respecting the HLA (High Level Architecture) protocol.",
+          "tasks": []  
+        }
+      ]
+    },
+    {
+      "title": "Software Engineer",
+      "company": "Safran (Mission for Sogeti)",
+      "years": "Mars 2003 - Feb 2007",
+      "location": "Paris Area, France",
+      "sort": 7,
+      "missions": [
+        {
+          "description": "Development and corrective maintenance of the geographic information system (GIS), and the preparation and followup mission software, for the control station of the tactical UAV (Unmanned Aircraft Vehicle) system SPERWER.",
+          "tasks": []
+        },
+        {
+          "description": "For a new, tactical UAV program, multi aircrafts (SPERWER Moyen Duc), in partnership with Dassault, software development of different modules of the control station.",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "title": "Apprenticeship Software Engineer",
+      "company": "CFA-AFTI (THALES Group)",
+      "years": "Oct 2000 - Oct 2002",
+      "location": "Paris Area, France",
+      "sort": 8
+    }
+  ],
+  "experiencetype2": [
+    {
+      "company": "Sixense Group",
+      "years": "Dec 2016 - Oct 2018",
+      "location": "Paris Area, France",
+      "sort" : 2,
+      "jobs": [
+        {
+          "title": "Scrum Master / Lead Developper Mobile-Desktop",
+          "years": "Feb 2018 - Oct 2018",
+          "missions": [
+            {
+              "description": "In addition to my developer activity (see below), I assumed the role of Scrum Master for the Mobile / Desktop team (3 people) on the project",
+              "tasks": [
+                "Assist the Product Owner to order the elements of the product backlog, write and split the user stories, and plan the release",
+                "Exchange permanently with the other Scrum Masters of the organization",
+                "Reporting to management",
+                "Facilitate agile practices within the team"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Senior Software Engineer",
+          "years": "Dec 2016 - Feb 2018",
+          "missions": [
+            {
+              "description": "As part of the implementation of a digital BIM solution (Building Information Modeling) for the management and monitoring of construction projects of the VINCI Construction Group, development and maintenance of some PC and mobile applications within a team organized in Agile / Scrum methodology.",
+              "tasks": [
+                "Mobile Development : Xamarin.Forms (C #, XAML, MVVM, Rest WebServices, iOS, Android, NUnit) and Xamarin.iOS (C #, MVC, iOS, SQLite, WebServices)",
+                "Desktop development : WPF (C #, XAML, MVVM, WebServices)",
+                "Project tracking, deposit hosting and documentation thanks to the Atlassian solution (JIRA, BitBucket, Confluence)"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+@inject NavigationManager NavManager
+@inject ILocalStorageService Localstorage
+@inject IStringLocalizer<Resource> Localizer
+
+<div>
+    <InputSelect style="outline:none; border:0px solid; background-color: transparent;" @bind-Value="UICulture" @onclick="SelectionChanged">
+        @foreach (var option in uicultures)
+        {
+            <option value="@option">@option.DisplayName</option>
+        }
+    </InputSelect>
+</div>
+
+@code 
+{
+    CultureInfo[] uicultures = new[]
+    {
+        new CultureInfo("en-US"),
+        new CultureInfo("fr-FR")
+    };
+
+    CultureInfo UICulture
+    {
+        get => CultureInfo.CurrentCulture;
+        set
+        {
+            if (CultureInfo.CurrentCulture != value)
+            {
+                // Set the culture in LocalStorage
+                this.Localstorage.SetItemAsync("currentculture", value.Name);
+
+                // Load the Current URL
+                this.NavManager.NavigateTo(NavManager.Uri, forceLoad: true);
+            }
+        }
+    }
+
+    private void SelectionChanged()
+    {
+    }
+
+    [Parameter]
+    public EventCallback<CultureInfo> OnSelectionChanged { get; set; }
+}

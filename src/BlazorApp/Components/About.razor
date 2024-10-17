@@ -1,3 +1,6 @@
+@inject IStringLocalizer<Resources.Resource> Localizer
+@inject LocalizationService LocalizationService
+
 <section class="light" id="about">
     @if (hero is not null)
     {
@@ -37,7 +40,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        aboutMe = await Http.GetFromJsonAsync<AboutMe>("sample-data/aboutme.json");
+        aboutMe = await Http.GetFromJsonAsync<AboutMe>("Data/aboutme.json");
         hero = await HeroImageService.GetHeroAsync(img => img.Name is "about");
 
     }

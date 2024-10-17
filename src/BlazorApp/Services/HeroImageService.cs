@@ -13,7 +13,7 @@ public sealed class HeroImageService : IDisposable
         _client = client;
         _getHeroImagesTask =
             _client.GetFromJsonAsync<List<HeroImage>>(
-                "sample-data/heroimages.json");
+                "Data/heroimages.json");
     }
 
     internal async Task<HeroImage?> GetHeroAsync(Func<HeroImage, bool> predicate)

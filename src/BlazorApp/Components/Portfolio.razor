@@ -14,6 +14,7 @@
                     alt="@(hero.Alt)" />
             }
         </div>
+
         <div class="container">
             @foreach (var project in projects)
             {
@@ -41,7 +42,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        projects = await Http.GetFromJsonAsync<List<Project>>("sample-data/projects.json");
+        projects = await Http.GetFromJsonAsync<List<Project>>("Data/projects.json");
         hero = await HeroImageService.GetHeroAsync(img => img.Name is "portfolio");
     }
 }

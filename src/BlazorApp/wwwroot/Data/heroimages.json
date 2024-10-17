@@ -1,7 +1,7 @@
 [
   {
     "name": "home",
-    "src": "images/woman-with-tablet.jpg",
+    "src": "images/background.jfif",
     "alt": "woman with glasses holding a tablet"
   },
   {
@@ -11,7 +11,12 @@
   },
   {
     "name": "portfolio",
-    "src": "images/design-desk.jpeg",
+    "src": "images/background.jfif",
+    "alt": "desktop with books and laptop"
+  },
+  {
+    "name": "hero",
+    "src": "images/micka.jpg",
     "alt": "desktop with books and laptop"
   }
 ]
