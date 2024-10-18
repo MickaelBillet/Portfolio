@@ -36,7 +36,7 @@
           "tasks": []
         },
         {
-          "description": "Development of new features on medical device software intended for cardiologists according to standard EN62304 (C #, XAML, Asp.Net Core WebAPI, WPF, Identity, FTDI, MS Access, SQL Server, Dapper, ADO.NET, Entity Framework Core , MySql, SqlLite, Git)",
+          "description": "Development of new features on medical device software intended for cardiologists according to standard EN62304. (C #, XAML, Asp.Net Core WebAPI, WPF, Identity, FTDI, MS Access, SQL Server, Dapper, ADO.NET, Entity Framework Core , MySql, SqlLite, Git)",
           "tasks": [
             "Authentication and authorization system (GDPR compliance)",
             "Patients anonymization",
@@ -55,7 +55,7 @@
       "sort": 3,
       "missions": [
         {
-          "description": "Within a biotechnology Startup, co-development of a medical device (Probea), specialized in real-time diagnosis assistance for cancer based on the analysis of endogenous fluorescence emitted by tumour tissue",
+          "description": "Within a biotechnology Startup, co-development of a medical device (Probea), specialized in real-time diagnosis assistance for cancer based on the analysis of endogenous fluorescence emitted by tumour tissue.",
           "tasks": [
             "Specification, architecture (MVVM), coding (C#, XAML and WPF), verification and configuration management (GIT) of the software system. The software is designed to control the device and analyze the data collected, according to the EN62304 standard.",
             "Project management and management of 2 developers.",
@@ -74,7 +74,7 @@
       "sort": 4,
       "missions": [
         {
-          "description": "Specific missions in different companies specializing in medical devices",
+          "description": "Specific missions in different companies specializing in medical devices.",
           "tasks": [
             "Software development for Novacor (http://www.novacor.fr/).",
             "Advice for the implementation of the EN62304 and EN14971 for Damae Medical (http://damaemedical.fr/).",
@@ -150,7 +150,7 @@
           "years": "Feb 2018 - Oct 2018",
           "missions": [
             {
-              "description": "In addition to my developer activity (see below), I assumed the role of Scrum Master for the Mobile / Desktop team (3 people) on the project",
+              "description": "In addition to my developer activity (see below), I assumed the role of Scrum Master for the Mobile / Desktop team (3 people) on the project.",
               "tasks": [
                 "Assist the Product Owner to order the elements of the product backlog, write and split the user stories, and plan the release",
                 "Exchange permanently with the other Scrum Masters of the organization",

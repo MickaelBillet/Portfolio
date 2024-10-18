@@ -1,6 +1,6 @@
 namespace BlazorApp.Models
 {
-    public class Job
+    public record Job
     {
         public string title { get; set; } = string.Empty;
         public string years { get; set; } = string.Empty;

@@ -1,6 +1,6 @@
 namespace BlazorApp.Models
 {
-    public class ExperienceType1 : ExperienceType
+    public record ExperienceType1 : ExperienceType
     {
         public string title { get; set; } = string.Empty;
         public string company { get; set; } = string.Empty;

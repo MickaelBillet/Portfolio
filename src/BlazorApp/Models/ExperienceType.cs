@@ -1,6 +1,6 @@
 namespace BlazorApp.Models
 {
-    public abstract class ExperienceType : Item
+    public record class ExperienceType : Item
     {
     }
 }
