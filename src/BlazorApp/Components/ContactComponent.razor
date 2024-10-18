@@ -1,0 +1,18 @@
+@inject IStringLocalizer<Resources.Resource> Localizer
+@inject LocalizationService LocalizationService
+
+<h3 style="margin: 0px 0px 10px 0px">@Localizer["Contact"]</h3>
+<div>
+    <h4>@resume.name</h4>
+    <div style="text-align: center">
+        <h5>@resume.address</h5>
+        <h5>@resume.phone</h5>
+        <h5>@resume.mail</h5>
+    </div>
+</div>
+
+
+@code {
+    [Parameter]
+    public required BlazorApp.Models.Resume resume { get; set; }
+}

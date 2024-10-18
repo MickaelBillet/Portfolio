@@ -1,0 +1,92 @@
+@inject IStringLocalizer<Resources.Resource> Localizer
+@inject LocalizationService LocalizationService
+
+<h3 style="margin: 0px 0px 10px 0px">@Localizer["Professionnal Experience"]</h3>
+<div>
+    @foreach (var item in experiences)
+    {
+        if (item is ExperienceType1)
+        {
+            ExperienceType1? experience = item as ExperienceType1;
+            <h4 style="margin: 15px 0 0 0">@experience!.title</h4>
+            <h5>@experience.company</h5>
+            <h5>@experience.years</h5>
+            <p style="margin : 0 0 0 0">@experience.location</p>
+            foreach (var mission in experience.missions)
+            {
+                if (mission.tasks.Any())
+                {
+                    <details>
+                        <summary style="text-align:justify">@mission.description</summary>
+                        @foreach (var task in mission.tasks)
+                        {
+                            <ul style="margin:0 0 0 0; line-height:1; font-size:0.9rem; font-weight:500; text-align:left">
+                                <li>@task</li>
+                            </ul>
+                        }
+                    </details>
+                }
+                else
+                {
+                    <h6>@mission.description</h6>
+                }
+            }
+        }
+        else if (item is ExperienceType2)
+        {
+            ExperienceType2? experience = item as ExperienceType2;
+            <h4 style="margin: 15px 0 0 0">@experience!.company</h4>
+            <h5>@experience.years</h5>
+            <p style="margin : 0 0 0 0">@experience.location</p>
+            foreach (var job in experience.jobs)
+            {
+                <h4 style="margin: 15px 0 0 0">@job.title</h4>
+                <h5>@job.years</h5>
+                foreach (var mission in job.missions)
+                {
+                    if (mission.tasks.Any())
+                    {
+                        <details>
+                            <summary style="text-align:justify">@mission.description</summary>
+                            @foreach (var task in mission.tasks)
+                            {
+                                <ul style="margin:0 0 0 0; line-height:1; font-size:0.9rem; font-weight:500; text-align:left">
+                                    <li>@task</li>
+                                </ul>
+                            }
+                        </details>
+                    }
+                    else
+                    {
+                        <h6>@mission.description</h6>
+                    }
+                }
+            }
+        }
+    }
+</div>
+@code {
+    [Parameter]
+    public required BlazorApp.Models.Resume? resume { get; set; }
+
+    [Parameter]
+    public required int startindex { get; set; }
+
+    [Parameter]
+    public required int count { get; set; }
+
+    private List<ExperienceType> experiences { get; set; } = new List<ExperienceType>();
+
+    protected override void OnParametersSet()
+    {
+        if (resume != null)
+        {
+            experiences = experiences.Concat(resume.experiencetype2)
+                                        .Concat(resume.experiencetype1)
+                                        .OrderBy((arg) => arg.sort)
+                                        .ToList()
+                                        .GetRange(startindex, count);
+        }
+    }
+
+}

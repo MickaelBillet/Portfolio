@@ -135,4 +135,13 @@
   <data name="About me" xml:space="preserve">
     <value>A propos</value>
   </data>
+  <data name="Sumary" xml:space="preserve">
+    <value>Résumé</value>
+  </data>
+  <data name="Education" xml:space="preserve">
+    <value>Formation</value>
+  </data>
+  <data name="Professionnal Experience" xml:space="preserve">
+    <value>Expérience</value>
+  </data>
 </root>

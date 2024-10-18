@@ -57,7 +57,7 @@
         {
           "description": "Within a biotechnology Startup, co-development of a medical device (Probea), specialized in real-time diagnosis assistance for cancer based on the analysis of endogenous fluorescence emitted by tumour tissue",
           "tasks": [
-            "Specification, architecture (MVVM), coding (C #, XAML and WPF), verification and configuration management (GIT) of the software system. The software is designed to control the device and analyze the data collected, according to the EN62304 standard.",
+            "Specification, architecture (MVVM), coding (C#, XAML and WPF), verification and configuration management (GIT) of the software system. The software is designed to control the device and analyze the data collected, according to the EN62304 standard.",
             "Project management and management of 2 developers.",
             "Support of the technical team in the development of system engineering and technological choices.",
             "Establishment of risk managements process with the quality manager, according to the EN14971 standard and TR80002.",
@@ -167,8 +167,8 @@
             {
               "description": "As part of the implementation of a digital BIM solution (Building Information Modeling) for the management and monitoring of construction projects of the VINCI Construction Group, development and maintenance of some PC and mobile applications within a team organized in Agile / Scrum methodology.",
               "tasks": [
-                "Mobile Development : Xamarin.Forms (C #, XAML, MVVM, Rest WebServices, iOS, Android, NUnit) and Xamarin.iOS (C #, MVC, iOS, SQLite, WebServices)",
-                "Desktop development : WPF (C #, XAML, MVVM, WebServices)",
+                "Mobile Development : Xamarin.Forms (C#, XAML, MVVM, Rest WebServices, iOS, Android, NUnit) and Xamarin.iOS (C#, MVC, iOS, SQLite, WebServices)",
+                "Desktop development : WPF (C#, XAML, MVVM, WebServices)",
                 "Project tracking, deposit hosting and documentation thanks to the Atlassian solution (JIRA, BitBucket, Confluence)"
               ]
             }

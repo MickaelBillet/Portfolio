@@ -88,15 +88,28 @@ h2 {
 }
 
 h3 {
-  font-weight: 400;
-  font-size: 1.25rem;
+  font-weight: 600;
+  font-size: 1.2rem;
   margin: 0;
+}
+
+h4 {
+    font-weight: 500;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+}
+
+h5 {
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 5px 0px 5px 0px
 }
 
 p {
   font-size: 18px;
   line-height: 1.5;
-  margin-bottom: 0;
+  margin: 0 0 0 0;
   font-weight: 300;
 }
 
@@ -196,12 +209,12 @@ img.social-icon {
     z-index: 1000;
 }
 
-    #blazor-error-ui .dismiss {
-        cursor: pointer;
-        position: absolute;
-        right: 0.75rem;
-        top: 0.5rem;
-    }
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}
 
 .loading-progress {
     position: relative;
