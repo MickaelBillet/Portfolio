@@ -2,29 +2,32 @@
 @inject LocalizationService LocalizationService
 
 <section class="light" id="about">
-    @if (hero is not null)
+    @if (background is not null)
     {
-        <img class="background" src="@(hero.Src)" alt="@(hero.Alt)" />
+        <img class="background" src="@(background.Src)" alt="@(background.Alt)" />
     }
-    <h2>About Myself</h2>
+    <h2>@Localizer["About me"]</h2>
     <div style="background-color: white; width: 50%; padding: 4rem; margin: 3rem auto; text-align: center;">
-    @if (aboutMe is null)
-    {
-        <p><em>Loading...</em></p>
-    }
-    else
-    {
-        <p class="large">@aboutMe.Description</p>
-        <hr />
-        <ul style="text-align: left; columns: 2; font-size: 1.25rem; margin: 2rem 3rem; gap: 3rem;">
-        @foreach (var skill in aboutMe.Skills)
+        @if (aboutMe is null)
         {
-            <li key="@skill">@skill</li>
+            <p><em>Loading...</em></p>
         }
-        </ul>
-        <hr />
-        <p style="padding: 1rem 3rem 0;">@aboutMe.DetailOrQuote</p>
-    }
+        else
+        {
+            <div class="d-flex justify-content-center">
+                <img style="height: max-content; width:max-content; object-fit: cover;" src="@(hero.Src)" alt="@(hero.Alt)" />
+                <p class="large" style="align-content:center; margin:1rem 0 0 0">@aboutMe.Description</p>
+            </div>
+            <hr />
+            <ul style="text-align: left; columns: 2; font-size: 1.25rem; margin: 2rem 3rem; gap: 3rem;">
+            @foreach (var skill in aboutMe.Skills)
+            {
+                <li key="@skill">@skill</li>
+            }
+            </ul>
+            <hr />
+            <p style="padding: 1rem 3rem 0;">@aboutMe.DetailOrQuote</p>
+        }
     </div>
 </section>
 
@@ -37,11 +40,19 @@
 
     private AboutMe? aboutMe;
     private HeroImage? hero;
+    private HeroImage? background;
 
     protected override async Task OnInitializedAsync()
     {
-        aboutMe = await Http.GetFromJsonAsync<AboutMe>("Data/aboutme.json");
-        hero = await HeroImageService.GetHeroAsync(img => img.Name is "about");
-
+        if (await this.LocalizationService.GetLanguage() == Language.EnglishCode)
+        {
+            aboutMe = await Http.GetFromJsonAsync<AboutMe>("Data/aboutme.json");
+        }
+        else
+        {
+            aboutMe = await Http.GetFromJsonAsync<AboutMe>("Data/aboutme_fr.json");
+        }
+        hero = await HeroImageService.GetHeroAsync(img => img.Name is "hero");
+        background = await HeroImageService.GetHeroAsync(img => img.Name is "about");
     }
 }
