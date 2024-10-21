@@ -145,4 +145,7 @@
   <data name="Professionnal Experience" xml:space="preserve">
     <value>Professionnal Experience</value>
   </data>
+  <data name="Interests" xml:space="preserve">
+    <value>Interests</value>
+  </data>
 </root>
