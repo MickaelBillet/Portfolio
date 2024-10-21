@@ -3,10 +3,10 @@
 @inject IStringLocalizer<Resource> Localizer
 
 <div>
-    <InputSelect style="outline:none; border:0px solid; font-size:medium; background-color: transparent; color:black; text-decoration:none; opacity:0.8" @bind-Value="UICulture" @onclick="SelectionChanged">
+    <InputSelect style="outline:none; border:0px solid; font-size:medium; background-color: transparent; color:black; text-decoration:none; opacity:0.8" @bind-Value="UICulture">
         @foreach (var option in uicultures)
         {
-            <option value="@option">@option.DisplayName</option>
+            <option value="@option">@Localizer[@option.Name]</option>
         }
     </InputSelect>
 </div>
@@ -37,10 +37,6 @@
                 #endif
             }
         }
-    }
-
-    private void SelectionChanged()
-    {
     }
 
     [Parameter]

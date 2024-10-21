@@ -147,4 +147,10 @@
   <data name="Interests" xml:space="preserve">
     <value>Intérêts</value>
   </data>
+  <data name="en-US" xml:space="preserve">
+    <value>Anglais</value>
+  </data>
+  <data name="fr-FR" xml:space="preserve">
+    <value>Français</value>
+  </data>
 </root>
