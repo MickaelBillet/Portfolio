@@ -1,0 +1,180 @@
+{
+  "name": "Mickaël Billet",
+  "address": "10, rue Walter D'Islou 78800 Houilles, FR",
+  "phone": "06 25 70 76 47",
+  "mail": "mickael.billet@gmail.com",
+  "education": [
+    {
+      "title": "Xamarin University",
+      "description": "Xamarin Certified Mobile Developer",
+      "years": "2017 - 2019",
+      "sort": 1
+    },
+    {
+      "title": "CFA-AFTI (ETGL)",
+      "description": "Ingénieur en Génie Logiciel",
+      "years": "2000 - 2002",
+      "sort": 2
+    },
+    {
+      "title": "Université de Rouen",
+      "description": "Maîtrise de Sciences et Techniques",
+      "years": "1997 - 1999",
+      "sort": 3
+    }
+  ],
+  "experiencetype1": [
+    {
+      "title": "Ingénieur Développement Logiciel Sénior",
+      "company": "Novacor",
+      "years": "Oct 2018 - Aujourd'hui'",
+      "location": "Région de Paris, France",
+      "sort": 1,
+      "missions": [
+        {
+          "description": "Développement d'une solution logicielle permettant d'assurer la mise à jour, la traçabilité et la sérialisation des dispositifs médicaux Novacor. (C#, C++, XAML, Asp.Net Core WebAPI, WPF, Identity, Hid, Ftdi, Bluetooth Low Energy, SQL Server, Dapper, Git)",
+          "tasks": []
+        },
+        {
+          "description": "Développement de nouvelles fonctionnalités sur un logiciel dispositif médical destiné aux cardiologues suivant la norme EN62304 (C#, XAML, Asp.Net Core WebAPI, WPF, Identity, Ftdi, MS Access, SQL Server, Dapper, ADO.NET, Entity Framework Core, MySql, SqlLite, Git, HL7, Dicom)",
+          "tasks": [
+            "Système d'authentification et d'autorisation (Conformité RGPD)",
+            "Anonymisation patient",
+            "Interopérabilité HL7 et Dicom (Recherche et mise en place d'une solution afin d'interconnecter le logiciel avec les systèmes d'information des hôpitaux suivant le standard HL7 et Dicom)",
+            "Migration de l'application en WPF .Net Core",
+            "Migration des bases de données au format propriétaire vers MySql, SqlLite et SQL Server"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Responsable Développement Logiciel",
+      "company": "Nodea Medical",
+      "years": "Déc 2014 - Aout 2016",
+      "location": "Région de Paris, France",
+      "sort": 3,
+      "missions": [
+        {
+          "description": "Au sein d’une Startup en biotechnologie, collaboration au développement d’un dispositif médical (Probea), d’aide au diagnostic en temps réel du cancer du sein, basé sur l’analyse de la fluorescence endogène des cellules.",
+          "tasks": [
+            "Spécification, architecture, codage (C#, XAML et WPF), vérification et gestion de la configuration (GIT) du système logiciel permettant de piloter le dispositif et d’analyser les données recueillies, suivant la norme EN62304.",
+            "Gestion de projet et encadrement d’une équipe de 2 développeurs.",
+            "Accompagnement de l’équipe technique dans la mise en place de l’Ingénierie Système et des choix technologiques.",
+            "Mise en place du processus de gestions des risques avec le responsable qualité, suivant les normes EN14971 et TR80002.",
+            "Participation aux audits de certification ISO13485."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Consultant Logiciel Médical",
+      "company": "Freelance",
+      "years": "2015",
+      "location": "Région de Paris, France",
+      "sort": 4,
+      "missions": [
+        {
+          "description": "Missions pour différentes sociétés spécialisées dans les dispositifs médicaux",
+          "tasks": [
+            "Développement logiciel pour Novacor (http://www.novacor.fr/).",
+            "Conseil pour la mise en place des normes EN62304 et EN14971 pour Damae Medical (http://damaemedical.fr/).",
+            "Audit du département logiciel pour VitaDX (http://fr.vitadx.com/)."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Ingénieur Développement Logiciel Sénior",
+      "company": "Novacor",
+      "years": "Mars 2009 - Nov 2014",
+      "location": "Région de Paris, France",
+      "sort": 5,
+      "missions": [
+        {
+          "description": "Responsable du développement d’une application destinée à lire, programmer et analyser les données recueillies par un enregistreur cardiaque ambulatoire d’événements ECG (électrocardiographie). Ce dispositif médical (RTEST), destiné aux cardiologues, permet de détecter, mémoriser les événements pathologiques et d'enregistrer la fréquence cardiaque en continu.",
+          "tasks": [
+            "Spécification, architecture (MVC), conception (Modélisation UML), codage (C#, XAML, WPF, SQL, ADO.NET et C++), vérification, gestion de la configuration (GIT), installation (InnoSetup) et maintenance du système logiciel.",
+            "Mise en place de la conformité aux normes EN62304 relative au processus du cycle de vie des logiciels et EN14971 liée au processus de gestion des risques, des dispositifs médicaux. (Classe de sécurité B)",
+            "Participation in ISO9001/13485 certification audits."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Ingénieur Développement Logiciel Sénior",
+      "company": "Thales (Mission pour Soat)",
+      "years": "Mars 2007 - Fév 2009",
+      "location": "Région de Paris, France",
+      "sort": 6,
+      "missions": [
+        {
+          "description": "Dans le cadre de la réalisation pour la DGA d’un simulateur d’étude afin d’évaluer de futures plateformes, développement et maintenance de différents composants logiciels intégrés dans un environnement de simulation distribuée, respectant le protocole HLA.",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "title": "Ingénieur Développement Logiciel",
+      "company": "Safran (Mission for Sogeti)",
+      "years": "Mars 2003 - Fév 2007",
+      "location": "Région de Paris, France",
+      "sort": 7,
+      "missions": [
+        {
+          "description": "Dans le cadre d’un nouveau programme de drones tactiques, multi-avions (SPERWER-MOYENDUC), en collaboration avec Dassault, développement de différents modules logiciels de la station de contrôle.",
+          "tasks": []
+        },
+        {
+          "description": "Maintenance évolutive et corrective du système d’information géographique (SIG), et du logiciel de préparation et de suivi de mission, pour la station de contrôle du système de drônes tactiques SPERWER.",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "title": "Apprenti Ingénieur Développement Logiciel",
+      "company": "CFA-AFTI (THALES Group)",
+      "years": "Oct 2000 - Oct 2002",
+      "location": "Région de Paris, France",
+      "sort": 8
+    }
+  ],
+  "experiencetype2": [
+    {
+      "company": "Sixense Groupe",
+      "years": "Déc 2016 - Oct 2018",
+      "location": "Région de Paris, France",
+      "sort": 2,
+      "jobs": [
+        {
+          "title": "Scrum Master / Lead Développeur Mobile-Desktop",
+          "years": "Feb 2018 - Oct 2018",
+          "missions": [
+            {
+              "description": "En plus de mon activité de développeur (voir ci-dessous), j'ai assuré le rôle de Scrum Master pour l'équipe Mobile/Desktop (3 personnes) sur le projet, en assurant notamment les taches suivantes",
+              "tasks": [
+                "Aider le Product Owner à ordonner les éléments du backlog produit, à écrire et découper les user stories, et à planifier la release",
+                "Échanger en permanence avec les autres Scrum Masters de l'organisation",
+                "Effectuer le reporting auprès du management",
+                "Faciliter les pratiques agile au sein de l'équipe"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Ingénieur Développement Logiciel Sénior",
+          "years": "Déc 2016 - Fév 2018",
+          "missions": [
+            {
+              "description": "Dans le cadre de la mise en place d’une solution digitale BIM (Building Information Modeling) pour la gestion et le suivi des projets de construction du groupe VINCI Construction, développement et maintenance de différentes applications PC et mobile au sein d’une équipe organisée en méthodologie Agile/Scrum",
+              "tasks": [
+                "Développement mobile Xamarin.Forms (C#, XAML, MVVM, WebServices Rest, iOS, Android, NUnit) et Xamarin.iOS (C#, MVC, iOS, SQLite, WebServices)",
+                "Développement desktop WPF (C#, XAML, MVVM, WebServices)",
+                "Suivi de projets, hébergement des dépôts et documentation grâce à la suite Atlassian (JIRA, BitBucket, Confluence)"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

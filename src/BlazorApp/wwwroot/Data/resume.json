@@ -18,7 +18,7 @@
     },
     {
       "title": "Rouen University",
-      "description": "Master",
+      "description": "Master of Science and Technology",
       "years": "1997 - 1999",
       "sort": 3
     }
@@ -36,11 +36,11 @@
           "tasks": []
         },
         {
-          "description": "Development of new features on medical device software intended for cardiologists according to standard EN62304. (C #, XAML, Asp.Net Core WebAPI, WPF, Identity, FTDI, MS Access, SQL Server, Dapper, ADO.NET, Entity Framework Core , MySql, SqlLite, Git)",
+          "description": "Development of new features on medical device software intended for cardiologists according to standard EN62304. (C #, XAML, Asp.Net Core WebAPI, WPF, Identity, FTDI, MS Access, SQL Server, Dapper, ADO.NET, Entity Framework Core , MySql, SqlLite, Git, HL7, Dicom)",
           "tasks": [
             "Authentication and authorization system (GDPR compliance)",
             "Patients anonymization",
-            "HL7 interoperability (Research and implementation of a solution to interconnect the software with hospital information systems according to the HL7 standard)",
+            "HL7 and Dicom interoperability (Research and implementation of a solution to interconnect the software with hospital information systems according to the HL7 standard and Dicom)",
             "Migration of the application to WPF .Net Core",
             "Migration of database to MySql, SqlLite et SQL Server"
           ]
@@ -57,7 +57,7 @@
         {
           "description": "Within a biotechnology Startup, co-development of a medical device (Probea), specialized in real-time diagnosis assistance for cancer based on the analysis of endogenous fluorescence emitted by tumour tissue.",
           "tasks": [
-            "Specification, architecture (MVVM), coding (C#, XAML and WPF), verification and configuration management (GIT) of the software system. The software is designed to control the device and analyze the data collected, according to the EN62304 standard.",
+            "Specification, architecture, coding (C#, XAML and WPF), verification and configuration management (GIT) of the software system. The software is designed to control the device and analyze the data collected, according to the EN62304 standard.",
             "Project management and management of 2 developers.",
             "Support of the technical team in the development of system engineering and technological choices.",
             "Establishment of risk managements process with the quality manager, according to the EN14971 standard and TR80002.",
@@ -74,7 +74,7 @@
       "sort": 4,
       "missions": [
         {
-          "description": "Specific missions in different companies specializing in medical devices.",
+          "description": "Specific missions in different companies specializing in medical devices",
           "tasks": [
             "Software development for Novacor (http://www.novacor.fr/).",
             "Advice for the implementation of the EN62304 and EN14971 for Damae Medical (http://damaemedical.fr/).",
