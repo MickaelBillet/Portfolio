@@ -1,12 +1,11 @@
 [
   {
-    "title": "10 Things To Know About Azure Static Web Apps 🎉",
-    "description": "Collaboration to create a beginner friendly article to help explain Azure Static Web Apps and tooling to get started.",
+    "title": "Home automation solution (Connected objects)",
+    "descriptions": [
+      "Development of a home automation solution to control electrical devices (heating, ventilation, water heater, etc.) in my home from a mobile application and a web application, in order to reduce electricity consumption and improve comfort.",
+      "The web server part runs on Raspberry PI (Raspberry Pi OS) and is developed using Asp.Net Core (C#) for the services and KeyCloak for the authentication/authorization part, all running behind an Nginx server.",
+      "The home automation server part for controlling devices (sensors and modules) is developed in C++ and runs on Arduino and ESP8266 boards. Finally, the mobile application is developed using Xamarin.Forms (C#) and the web application in Blazor WASM (C#)."
+    ],
     "url": "https://dev.to/azure/10-things-to-know-about-azure-static-web-apps-3n4i"
-  },
-  {
-    "title": "Web Development for Beginners",
-    "description": "Contributed sketch note imagery to accompany each lesson. These help provide visual representation of what is being taught.",
-    "url": "https://github.com/microsoft/web-dev-for-beginners"
   }
 ]

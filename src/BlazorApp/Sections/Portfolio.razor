@@ -1,3 +1,6 @@
+@inject IStringLocalizer<Resources.Resource> Localizer
+@inject LocalizationService LocalizationService
+
 <section class="light" id="portfolio">
     <h2>Portfolio</h2>
     <div class="portfolio-container">
@@ -16,15 +19,22 @@
         </div>
 
         <div class="container">
-            @foreach (var project in projects)
-            {
-                <div class="box" key="@project.Title">
-                    <a href="@project.Url" target="_blank" rel="noopener noreferrer">
-                        <h3 style="flex-basis: 40px;">@project.Title</h3>
-                    </a>
-                    <p class="small">@project.Description</p>
-                </div>
-            }
+            <div class="grid-container">
+                @foreach (var project in projects)
+                {
+                    <div class="box grid-item" key="@project.title" style="width:600px; margin: 20px 0px 0px 0px">
+                        <div key="@project.title">
+                            <a href="@project.Url" target="_blank" rel="noopener noreferrer">
+                                <h3 style="flex-basis: 40px;">@project.title</h3>
+                            </a>
+                        </div>
+                        @foreach(var description in project.descriptions)
+                        {
+                            <p class="small" style="text-align:justify">@description</p>
+                        }
+                    </div>
+                }
+            </div>            
         </div>
     }
     </div>
@@ -42,7 +52,15 @@
 
     protected override async Task OnInitializedAsync()
     {
-        projects = await Http.GetFromJsonAsync<List<Project>>("Data/projects.json");
+        if (await this.LocalizationService.GetLanguage() == Language.EnglishCode)
+        {
+            projects = await Http.GetFromJsonAsync<List<Project>>("Data/projects.json");
+        }
+        else
+        {
+            projects = await Http.GetFromJsonAsync<List<Project>>("Data/projects_fr.json");
+        }
+
         hero = await HeroImageService.GetHeroAsync(img => img.Name is "portfolio");
     }
 }

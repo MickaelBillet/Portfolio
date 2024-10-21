@@ -1,0 +1,11 @@
+[
+  {
+    "title": "Développement d'une solution domotique (Objets connectés)",
+    "descriptions": [
+      "Développement d'une solution domotique permettant de piloter les appareils électriques (chauffage, ventilation, chauffe-eau…) de mon habitation depuis une application mobile et une application web, afin de réduire la consommation électrique et d'améliorer le confort.",
+      "La partie serveur Web s’exécute sur des Raspberry PI (Raspberry Pi OS) et est développée grâce à la technologie Asp.Net Core (C#) pour les services et à KeyCloak pour la partie authentification/autorisation, l'ensemble fonctionnant derrière un serveur Nginx.",
+      "La partie serveur domotique pour le contrôle des périphériques (capteurs et modules) est développée en C++ et s’exécute sur des cartes Arduino et ESP8266. Enfin l’application mobile est développée grâce à Xamarin.Forms(C#) et l'application Web en Blazor WASM(C#)."
+    ],
+    "url": "https://dev.to/azure/10-things-to-know-about-azure-static-web-apps-3n4i"
+  }
+]
