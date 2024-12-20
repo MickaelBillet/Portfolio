@@ -226,7 +226,7 @@ img.social-icon {
 
     .loading-progress circle {
         fill: none;
-        stroke: #e0e0e0;
+        stroke: #bababa;
         stroke-width: 0.6rem;
         transform-origin: 50% 50%;
         transform: rotate(-90deg);
