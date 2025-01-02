@@ -1,8 +1,8 @@
 {
   "description": "Ingénieur en génie logiciel fort de différentes expériences dans le développement de dispositifs médicaux.",
   "skills": [
-    "Desktop Application (WPF, UWP)",
-    "Développement Mobile (Xamarin)",
+    "Desktop Application (WPF, UWP, Maui)",
+    "Développement Mobile (Xamarin, Maui)",
     "Web Services (Asp.Net Core)",
     "Web Application (Blazor)",
     "Langages C#, C, C++",

@@ -9,7 +9,7 @@
     <!-- Section Title -->
     <h2>@Localizer["Resume"]</h2>
 
-    <div style="background-color: white; width: 60%; padding: 4rem; margin: 3rem auto; text-align: center;">
+    <div style="background-color: white; width: 70%; margin: 3em auto; text-align: center;">
         <div>
             @if (resume is null)
             {
@@ -19,7 +19,7 @@
             {
                 <section>
                     <div class="flex-container">
-                        <div class="flex-item-left">                            
+                        <div class="flex-item-left" style="margin: 2em 1em">                            
                             <ContactComponent resume="@resume"></ContactComponent>
                             <hr style="margin:20px 20px 20px 20px" />
                             <EducationComponent educations="@resume.education"></EducationComponent>
@@ -27,7 +27,7 @@
                             <ExperienceComponent resume="@resume" startindex="0" count="2"></ExperienceComponent>
                         </div>
 
-                        <div class="flex-item-right">
+                        <div class="flex-item-right" style="margin: 2em 1em">
                             <ExperienceComponent resume="@resume" startindex="2" count="6"></ExperienceComponent>
                         </div>
                     </div>

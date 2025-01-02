@@ -1,0 +1,69 @@
+@inject BrowserResizeService BrowserResizeService
+@implements IAsyncDisposable
+
+
+<ul style="text-align: left; columns: @NumberOfColumns; font-size: 1.25rem; margin: 2em; gap: 3em;">
+    @foreach (var skill in aboutMe.Skills)
+    {
+        <li key="@skill">@skill</li>
+    }
+</ul>
+
+@code {
+    [Parameter]
+    public required AboutMe aboutMe { get; set; }
+
+    private int NumberOfColumns = 1;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await CheckWindowSize();
+
+        DotNetObjectReference<SkillComponent> dotNetObjectReference = DotNetObjectReference.Create(this);
+
+        this.BrowserResizeService.RegisterResizeCallback(dotNetObjectReference);
+    }
+
+    private async Task CheckWindowSize()
+    {
+        int width = await this.BrowserResizeService.GetWindowWidthAsync();
+        if (width < 768)
+        {
+            NumberOfColumns = 1; // Petit écran
+        }
+        else if (width < 1024)
+        {
+            NumberOfColumns = 2; // Moyen écran
+        }
+        else
+        {
+            NumberOfColumns = 3; // Grand écran
+        }
+
+        StateHasChanged();
+    }
+
+    [JSInvokable]
+    public async Task OnResize(int width, int height)
+    {
+        if (width < 768)
+        {
+            NumberOfColumns = 1; // Petit écran
+        }
+        else if (width < 1024)
+        {
+            NumberOfColumns = 2; // Moyen écran
+        }
+        else
+        {
+            NumberOfColumns = 3; // Grand écran
+        }
+
+        StateHasChanged();
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        await this.BrowserResizeService.DisposeAsync();
+    }
+}
