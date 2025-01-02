@@ -7,7 +7,7 @@
         <img class="background" src="@(background.Src)" alt="@(background.Alt)" />
     }
     <h2>@Localizer["About me"]</h2>
-    <div style="background-color: white; width: 50%; padding: 4rem; margin: 3rem auto; text-align: center;">
+    <div style="background-color: white; width: 50%; padding: 4em; margin: 3em auto; text-align: center;">
         @if (aboutMe is null)
         {
             <p><em>Loading...</em></p>
@@ -19,14 +19,9 @@
                 <p class="large" style="align-content:center; margin:1rem 0 0 0">@aboutMe.Description</p>
             </div>
             <hr />
-            <ul style="text-align: left; columns: 2; font-size: 1.25rem; margin: 2rem 3rem; gap: 3rem;">
-            @foreach (var skill in aboutMe.Skills)
-            {
-                <li key="@skill">@skill</li>
-            }
-            </ul>
+            <SkillComponent aboutMe="@aboutMe"></SkillComponent>
             <hr />
-            <p style="padding: 1rem 3rem 0;">@aboutMe.DetailOrQuote</p>
+            <p style="padding: 1em 3em;">@aboutMe.DetailOrQuote</p>
         }
     </div>
 </section>

@@ -3,7 +3,7 @@ using Blazored.LocalStorage;
 
 namespace BlazorApp.Services
 {
-    public class LocalizationService
+    public sealed class LocalizationService
     {
         ILocalStorageService LocalStorage { get; set; }
 

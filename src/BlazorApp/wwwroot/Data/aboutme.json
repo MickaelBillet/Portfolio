@@ -1,8 +1,8 @@
 {
   "description": "Senior Software Engineer with different experiences in the development of medical devices",
   "skills": [
-    "Desktop Application (WPF, UWP)",
-    "Mobile Software (Xamarin)",
+    "Desktop Application (WPF, UWP, Maui)",
+    "Mobile Software Application (Xamarin, Maui)",
     "Web Services (Asp.Net Core)",
     "Web Application (Blazor)",
     "Languages C#, C, C++",
