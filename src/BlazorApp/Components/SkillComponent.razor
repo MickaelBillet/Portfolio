@@ -2,8 +2,8 @@
 @implements IAsyncDisposable
 
 
-<ul style="text-align: left; columns: @NumberOfColumns; font-size: 1.25rem; margin: 2em; gap: 3em;">
-    @foreach (var skill in aboutMe.Skills)
+<ul style="text-align: left; columns: @NumberOfColumns; font-size: 1.25rem; margin: 1em; gap: 3em;">
+    @foreach (var skill in AboutMe.Skills)
     {
         <li key="@skill">@skill</li>
     }
@@ -11,55 +11,43 @@
 
 @code {
     [Parameter]
-    public required AboutMe aboutMe { get; set; }
+    public required AboutMe AboutMe { get; set; }
 
     private int NumberOfColumns = 1;
 
     protected override async Task OnInitializedAsync()
     {
         await CheckWindowSize();
-
-        DotNetObjectReference<SkillComponent> dotNetObjectReference = DotNetObjectReference.Create(this);
-
-        this.BrowserResizeService.RegisterResizeCallback(dotNetObjectReference);
+        await this.BrowserResizeService.RegisterResizeCallback<SkillComponent>(DotNetObjectReference.Create(this));
     }
 
     private async Task CheckWindowSize()
     {
-        int width = await this.BrowserResizeService.GetWindowWidthAsync();
-        if (width < 768)
-        {
-            NumberOfColumns = 1; // Petit écran
-        }
-        else if (width < 1024)
-        {
-            NumberOfColumns = 2; // Moyen écran
-        }
-        else
-        {
-            NumberOfColumns = 3; // Grand écran
-        }
-
+        this.SetNumberOfColumns(await this.BrowserResizeService.GetWindowWidthAsync());
         StateHasChanged();
     }
 
     [JSInvokable]
     public async Task OnResize(int width, int height)
     {
+        this.SetNumberOfColumns(width);
+        StateHasChanged();
+    }
+
+    private void SetNumberOfColumns(int width)
+    {
         if (width < 768)
         {
-            NumberOfColumns = 1; // Petit écran
+            NumberOfColumns = 1;
         }
         else if (width < 1024)
         {
-            NumberOfColumns = 2; // Moyen écran
+            NumberOfColumns = 2;
         }
         else
         {
-            NumberOfColumns = 3; // Grand écran
+            NumberOfColumns = 3;
         }
-
-        StateHasChanged();
     }
 
     public async ValueTask DisposeAsync()

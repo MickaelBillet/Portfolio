@@ -1,17 +1,19 @@
 @inject IStringLocalizer<Resources.Resource> Localizer
 @inject LocalizationService LocalizationService
+@inject BrowserResizeService BrowserResizeService
+@implements IAsyncDisposable
 
 <section class="light" id="resume">
-    @if (background is not null)
+    @if (Background is not null)
     {
-        <img class="background" src="@(background.Src)" alt="@(background.Alt)" />
+        <img class="background" src="@(Background.Src)" alt="@(Background.Alt)" />
     }
     <!-- Section Title -->
     <h2>@Localizer["Resume"]</h2>
 
-    <div style="background-color: white; width: 70%; margin: 3em auto; text-align: center;">
+    <div style="background-color: white; width: @Width; margin: 3em auto; text-align: center;">
         <div>
-            @if (resume is null)
+            @if (Content is null)
             {
                 <p><em>Loading...</em></p>
             }
@@ -20,15 +22,15 @@
                 <section>
                     <div class="flex-container">
                         <div class="flex-item-left" style="margin: 2em 1em">                            
-                            <ContactComponent resume="@resume"></ContactComponent>
+                            <ContactComponent resume="@Content"></ContactComponent>
                             <hr style="margin:20px 20px 20px 20px" />
-                            <EducationComponent educations="@resume.education"></EducationComponent>
+                            <EducationComponent educations="@Content.education"></EducationComponent>
                             <hr style="margin:20px 20px 20px 20px"/>
-                            <ExperienceComponent resume="@resume" startindex="0" count="2"></ExperienceComponent>
+                            <ExperienceComponent resume="@Content" startindex="0" count="2"></ExperienceComponent>
                         </div>
 
                         <div class="flex-item-right" style="margin: 2em 1em">
-                            <ExperienceComponent resume="@resume" startindex="2" count="6"></ExperienceComponent>
+                            <ExperienceComponent resume="@Content" startindex="2" count="6"></ExperienceComponent>
                         </div>
                     </div>
                 </section>
@@ -44,20 +46,54 @@
     [Parameter, EditorRequired]
     public required HeroImageService HeroImageService { get; set; }
 
-    private BlazorApp.Models.Resume? resume;
-    private HeroImage? background;
+    private BlazorApp.Models.Resume? Content;
+    private HeroImage? Background;
+    private string Width = "70%";
 
     protected override async Task OnInitializedAsync()
     {
         if (await this.LocalizationService.GetLanguage() == Language.EnglishCode)
         {
-            resume = await Http.GetFromJsonAsync<BlazorApp.Models.Resume>("Data/resume.json");
+            this.Content = await Http.GetFromJsonAsync<BlazorApp.Models.Resume>("Data/resume.json");
         }
         else
         {
-            resume = await Http.GetFromJsonAsync<BlazorApp.Models.Resume>("Data/resume_fr.json");
+            this.Content = await Http.GetFromJsonAsync<BlazorApp.Models.Resume>("Data/resume_fr.json");
         }
 
-        background = await HeroImageService.GetHeroAsync(img => img.Name is "about");
+        this.Background = await HeroImageService.GetHeroAsync(img => img.Name is "about");
+        await CheckWindowSize();
+
+        await this.BrowserResizeService.RegisterResizeCallback<Resume>(DotNetObjectReference.Create(this));
+    }
+
+    private async Task CheckWindowSize()
+    {
+        this.SetWidth(await this.BrowserResizeService.GetWindowWidthAsync());
+        StateHasChanged();
+    }
+
+    [JSInvokable]
+    public async Task OnResize(int width, int height)
+    {
+        this.SetWidth(width);
+        StateHasChanged();
+    }
+
+    private void SetWidth(int width)
+    {
+        if (width < 768)
+        {
+            this.Width = "100%";
+        }
+        else
+        {
+            this.Width = "70%";
+        }
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        await this.BrowserResizeService.DisposeAsync();
     }
 }
