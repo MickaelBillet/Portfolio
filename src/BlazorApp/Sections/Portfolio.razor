@@ -19,10 +19,9 @@
         </div>
 
         <div class="container">
-            <div class="grid-container">
                 @foreach (var project in projects)
                 {
-                    <div class="box grid-item" key="@project.title" style="width:600px; margin: 0px 20px 20px 20px">
+                    <div class="box" key="@project.title" style="min-width:auto; margin: 0px 10px 10px 10px">
                         <div key="@project.title" style="margin: 20px">
                             <a href="@project.Url" target="_blank" rel="noopener noreferrer">
                                 <h3 style="flex-basis: 40px;">@project.title</h3>
@@ -34,7 +33,6 @@
                         }
                     </div>
                 }
-            </div>            
         </div>
     }
     </div>

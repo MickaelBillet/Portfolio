@@ -30,7 +30,7 @@ namespace BlazorApp.Services
             return await this.WindowSizeJsInterop.GetWindowHeight();
         }
 
-        public async Task RegisterResizeCallback(DotNetObjectReference<SkillComponent> helper)
+        public async Task RegisterResizeCallback<T>(DotNetObjectReference<T> helper) where T : class
         {
             await this.WindowSizeJsInterop.RegisterResizeCallback(helper);
         }

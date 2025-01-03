@@ -43,7 +43,7 @@ namespace BlazorApp.Services.JsInterop
             }
         }
 
-        public async ValueTask RegisterResizeCallback(DotNetObjectReference<SkillComponent> dotNetObjectReference)
+        public async ValueTask RegisterResizeCallback<T>(DotNetObjectReference<T> dotNetObjectReference) where T : class
         {
             var module = await moduleTask.Value;
             await module.InvokeVoidAsync("RegisterResizeCallback", dotNetObjectReference);
