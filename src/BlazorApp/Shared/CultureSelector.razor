@@ -26,15 +26,18 @@
         {
             if (CultureInfo.CurrentCulture != value)
             {
-                // Set the culture in LocalStorage
-                this.Localstorage.SetItemAsync("currentculture", value.Name);
+                Task.Run(async () =>
+                {
+                    // Set the culture in LocalStorage
+                    await this.Localstorage.SetItemAsync("currentculture", value.Name);
 
-                #if DEBUG 
-                // Load the Current URL
-                this.NavManager.NavigateTo("http://localhost:5000/", forceLoad: true);
-                #else
-                this.NavManager.NavigateTo("https://zapto.fr/", forceLoad: true);
-                #endif
+#if DEBUG
+        // Load the Current URL
+        this.NavManager.NavigateTo("http://localhost:5000/", forceLoad: true);
+#else
+                    this.NavManager.NavigateTo("https://zapto.fr/", forceLoad: true);
+#endif
+                });
             }
         }
     }
