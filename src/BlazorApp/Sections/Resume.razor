@@ -63,7 +63,6 @@
 
         this.Background = await HeroImageService.GetHeroAsync(img => img.Name is "about");
         await CheckWindowSize();
-
         await this.BrowserResizeService.RegisterResizeCallback<Resume>(DotNetObjectReference.Create(this));
     }
 

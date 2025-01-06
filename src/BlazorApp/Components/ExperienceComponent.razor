@@ -81,6 +81,7 @@
     {
         if (resume != null)
         {
+            experiences.Clear();    
             experiences = experiences.Concat(resume.experiencetype2)
                                         .Concat(resume.experiencetype1)
                                         .OrderBy((arg) => arg.sort)
